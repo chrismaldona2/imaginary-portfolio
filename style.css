@@ -1,0 +1,129 @@
+:root {
+    --navColor: #292929;
+    --navText: #ffffff;
+    --navTextHover: #29aa50;
+    --titleColor1: #248943;
+    --background1: #000000;
+    --spanHover: #29aa50;
+    --background2: #ffffff;
+    --footerColor: #292929;
+    --footerText: #ffffff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+nav {
+    position: sticky;
+    background-color: var(--navColor);
+    height: 60px;
+    text-align: right;
+}
+
+nav ul li{
+    display: inline;
+    padding: 2rem;
+    position: relative;
+    top: 20px;
+    right: 20px;
+}
+
+nav ul li a{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--navText);
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+nav ul li a:hover{
+    color: var(--navTextHover);
+    text-shadow: 0 0 4px var(--navTextHover);
+}
+
+.presentation {
+    background-color: var(--background1);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 130px 30px;
+    align-items: center;
+    text-align: center;
+}
+
+.presentationText {
+    color: var(--navText);
+    text-align: left;
+    margin-left: 20px;
+}
+
+.presentationText h1{
+    font-size: 3rem;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.presentationText h3{
+    font-size: 2rem;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: normal;
+}
+
+.photo {
+    width: 16rem;
+}
+
+span{
+    transition: 0.25s;
+}
+
+span:hover {
+    color: var(--spanHover);
+    text-shadow: 0 0 4px var(--spanHover);
+}
+
+.works-section {
+    background-color: var(--background2);
+    height: 80vh;
+}
+
+.works-section h2 {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 2rem;
+    color: var(--titleColor1);
+}
+
+.works {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.works img{
+    width: 16rem;
+}
+
+footer {
+    text-align: center;
+    justify-content: center;
+    background-color: var(--footerColor);
+}
+
+footer p {
+    padding: 30px;
+    color: var(--footerText);
+}
