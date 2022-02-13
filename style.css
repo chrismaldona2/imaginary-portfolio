@@ -1,129 +1,93 @@
 :root {
-    --navColor: #292929;
-    --navText: #ffffff;
-    --navTextHover: #29aa50;
-    --titleColor1: #248943;
-    --background1: #000000;
-    --spanHover: #29aa50;
-    --background2: #ffffff;
-    --footerColor: #292929;
-    --footerText: #ffffff;
+    --pageColor: #000000;
+    --pageColor2: #ffffff;
+    --textColor: #ffffff;
+    --textColorHover: #1F964B;
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@import url(//db.onlinewebfonts.com/c/51ee907427c788c3ab4442e73286d641?family=Corbel);
 
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-html {
-    box-sizing: border-box;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-
 nav {
-    position: sticky;
-    background-color: var(--navColor);
-    height: 60px;
+    position: absolute;
+    background-color: var(--pageColor);
     text-align: right;
+    height: 50px;
+    width: 100%;
+}
+
+nav ul {
+    margin-right: 50px;
 }
 
 nav ul li{
-    display: inline;
-    padding: 2rem;
     position: relative;
-    top: 20px;
-    right: 20px;
+    display: inline-block;
+    padding: 42px 10px;
 }
 
 nav ul li a{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1rem;
-    font-weight: bold;
-    color: var(--navText);
+    padding: 30px;
     text-decoration: none;
-    transition: 0.25s;
+    color: var(--textColor);
+    font-size: 1.1em;
+    font-family: 'Corbel', Arial, sans-serif;
+    font-weight: bold;
+    transition: 0.35s;
 }
 
 nav ul li a:hover{
-    color: var(--navTextHover);
-    text-shadow: 0 0 4px var(--navTextHover);
+    color: var(--textColorHover);
+    text-shadow: 0 0 5px var(--textColorHover);
+}
+
+#contact {
+    border: 3.5px solid var(--textColor);
+    border-radius: 10px;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+#contact:hover {
+    background-color: var(--pageColor2);
+    color: var(--pageColor);
+    text-shadow: none;
+}
+
+body {
+    background-color: var(--pageColor);
 }
 
 .presentation {
-    background-color: var(--background1);
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 130px 30px;
-    align-items: center;
-    text-align: center;
+    padding: 240px 75px;
+    color: var(--textColor);
+    font-family: 'Corbel', Arial, sans-serif;
 }
 
-.presentationText {
-    color: var(--navText);
-    text-align: left;
-    margin-left: 20px;
+.presentation h1 {
+    display: inline-block;
+    width: 50%;
+    font-size: 4em;
 }
 
-.presentationText h1{
-    font-size: 3rem;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
+span {
+    transition: 0.35s;
 }
 
-.presentationText h3{
-    font-size: 2rem;
-    font-family: Helvetica, Arial, sans-serif;
+span:hover{
+    color: var(--textColorHover);
+}
+
+.presentation h3 {
+    font-size: 1.5em;
     font-weight: normal;
-}
-
-.photo {
-    width: 16rem;
-}
-
-span{
-    transition: 0.25s;
-}
-
-span:hover {
-    color: var(--spanHover);
-    text-shadow: 0 0 4px var(--spanHover);
-}
-
-.works-section {
-    background-color: var(--background2);
-    height: 80vh;
-}
-
-.works-section h2 {
-    text-align: center;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    font-weight: bolder;
-    font-size: 2rem;
-    color: var(--titleColor1);
-}
-
-.works {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-}
-
-.works img{
-    width: 16rem;
-}
-
-footer {
-    text-align: center;
-    justify-content: center;
-    background-color: var(--footerColor);
-}
-
-footer p {
-    padding: 30px;
-    color: var(--footerText);
 }
